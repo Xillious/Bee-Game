@@ -9,6 +9,13 @@ public class HexagonSpawn : MonoBehaviour
     public GameObject thisHexagon;
     public List<Transform> spawnPoints = new List<Transform>();
 
+    public GameMaster gameMaster;
+
+    private void Awake()
+    {
+        gameMaster = FindObjectOfType<GameMaster>();
+    }
+
     void Start()
     {
         thisHexagon = this.gameObject;
@@ -28,15 +35,17 @@ public class HexagonSpawn : MonoBehaviour
         {
             Debug.Log("Building");
             EnableSpawnPoints();
+            gameMaster.SwitchState(GameMaster.GameState.Building);
+
 
         }
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            Debug.Log("Cancel");
-            DisableSpawnPoints();
 
         }
+
+
     }
 
     private void EnableSpawnPoints()
@@ -55,4 +64,6 @@ public class HexagonSpawn : MonoBehaviour
         }
         Debug.Log("disablaling spawn points");
     }
+
+
 }
