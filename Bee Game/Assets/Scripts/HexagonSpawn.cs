@@ -50,6 +50,7 @@ public class HexagonSpawn : MonoBehaviour
 
     private void EnableSpawnPoints()
     {
+
         foreach (Transform spawnPoint in spawnPoints)
         {
             spawnPoint.gameObject.SetActive(true);
