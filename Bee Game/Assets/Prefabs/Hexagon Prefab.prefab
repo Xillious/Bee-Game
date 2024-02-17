@@ -55,6 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisHexagon: {fileID: 0}
   spawnPoints: []
+  gameMaster: {fileID: 0}
 --- !u!212 &2844978737829253639
 SpriteRenderer:
   m_ObjectHideFlags: 0

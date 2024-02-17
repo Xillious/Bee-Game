@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4865841995607015108
 Transform:
   m_ObjectHideFlags: 0
@@ -130,7 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a8629c3fdc8b84d8389412200d7fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisHexagon: {fileID: 0}
+  spawnPoints: []
+  gameMaster: {fileID: 0}
   hexagon: {fileID: 2844978737829253638, guid: 7c4cf0c50c350214d994d1503b2a4226, type: 3}
+  objectInSpace: 0
 --- !u!50 &3078816067214524999
 Rigidbody2D:
   serializedVersion: 4

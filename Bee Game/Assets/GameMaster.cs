@@ -8,10 +8,18 @@ public class GameMaster : MonoBehaviour
     public enum GameState
     {
         Playing,
-        Building
+        Building,
+        NotBuilding
     }
 
     public GameState currentState;
+
+    public Canvas buildMenu;
+
+    public GameObject redHexagon;
+    public GameObject blueHexagon;
+
+    public GameObject selectedSpawnPoint;
 
     void Start()
     {
@@ -40,4 +48,23 @@ public class GameMaster : MonoBehaviour
     {
         return currentState;
     }
+
+    public void OpenMenu(Canvas menu)
+    {
+        menu.gameObject.SetActive(true);
+    }
+
+    public void CloseMenu(Canvas menu)
+    {
+        menu.gameObject.SetActive(false);
+    }
+
+    public void CreateHexagon(GameObject newHexagon)
+    {
+        //takes input of the hexagon to create then creates it at the position
+        Instantiate(newHexagon, selectedSpawnPoint.transform.position, selectedSpawnPoint.transform.rotation);
+        //hexagonSpawn.DisableSpawnPoints();
+    }
+
+
 }

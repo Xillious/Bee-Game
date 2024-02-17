@@ -22,9 +22,11 @@ public class HexagonSpawn : MonoBehaviour
 
         foreach (Transform child in transform)
         {
+            //adds each spawn point around the hexagon to a list
             spawnPoints.Add(child);
         }
 
+        DisableSpawnPoints();
 
     }
 
@@ -33,16 +35,20 @@ public class HexagonSpawn : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
+            //allows you to place new hexagons
             Debug.Log("Building");
-            EnableSpawnPoints();
             gameMaster.SwitchState(GameMaster.GameState.Building);
 
-
+        }
+        if (gameMaster.currentState == GameMaster.GameState.Building)
+        {
+            EnableSpawnPoints();
         }
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-
+            gameMaster.SwitchState(GameMaster.GameState.NotBuilding);
+            DisableSpawnPoints();
         }
 
 
@@ -50,7 +56,7 @@ public class HexagonSpawn : MonoBehaviour
 
     private void EnableSpawnPoints()
     {
-
+        //enables spawn points around the hexagon
         foreach (Transform spawnPoint in spawnPoints)
         {
             spawnPoint.gameObject.SetActive(true);
@@ -59,6 +65,7 @@ public class HexagonSpawn : MonoBehaviour
 
     public void DisableSpawnPoints()
     {
+        //disables spawn points around the hexagon
         foreach (Transform spawnPoint in spawnPoints)
         {
             spawnPoint.gameObject.SetActive(false);
