@@ -133,6 +133,9 @@ MonoBehaviour:
   thisHexagon: {fileID: 0}
   spawnPoints: []
   gameMaster: {fileID: 0}
+  hexagonMenu: {fileID: 0}
+  hexagonMenuGameObject: {fileID: 0}
+  resourceCost: 0
   hexagon: {fileID: 2654444374251995247}
   selectedSpawnPoint: {fileID: 0}
   objectInSpace: 0
@@ -290,6 +293,9 @@ MonoBehaviour:
   thisHexagon: {fileID: 0}
   spawnPoints: []
   gameMaster: {fileID: 0}
+  hexagonMenu: {fileID: 0}
+  hexagonMenuGameObject: {fileID: 0}
+  resourceCost: 0
   hexagon: {fileID: 2654444374251995247}
   selectedSpawnPoint: {fileID: 0}
   objectInSpace: 0
@@ -447,6 +453,9 @@ MonoBehaviour:
   thisHexagon: {fileID: 0}
   spawnPoints: []
   gameMaster: {fileID: 0}
+  hexagonMenu: {fileID: 0}
+  hexagonMenuGameObject: {fileID: 0}
+  resourceCost: 0
   hexagon: {fileID: 2654444374251995247}
   selectedSpawnPoint: {fileID: 0}
   objectInSpace: 0
@@ -604,6 +613,9 @@ MonoBehaviour:
   thisHexagon: {fileID: 0}
   spawnPoints: []
   gameMaster: {fileID: 0}
+  hexagonMenu: {fileID: 0}
+  hexagonMenuGameObject: {fileID: 0}
+  resourceCost: 0
   hexagon: {fileID: 2654444374251995247}
   selectedSpawnPoint: {fileID: 0}
   objectInSpace: 0
@@ -684,6 +696,9 @@ MonoBehaviour:
   thisHexagon: {fileID: 0}
   spawnPoints: []
   gameMaster: {fileID: 0}
+  hexagonMenu: {fileID: 5147840457192014013, guid: 220e058c1b422a244b90824f87ae2340, type: 3}
+  hexagonMenuGameObject: {fileID: 2586540371443403938, guid: 2dbb1bf364b200042a054a038de25caf, type: 3}
+  resourceCost: 0
 --- !u!212 &2654444374251995246
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -921,6 +936,9 @@ MonoBehaviour:
   thisHexagon: {fileID: 0}
   spawnPoints: []
   gameMaster: {fileID: 0}
+  hexagonMenu: {fileID: 0}
+  hexagonMenuGameObject: {fileID: 0}
+  resourceCost: 0
   hexagon: {fileID: 2654444374251995247}
   selectedSpawnPoint: {fileID: 0}
   objectInSpace: 0
@@ -1078,6 +1096,9 @@ MonoBehaviour:
   thisHexagon: {fileID: 0}
   spawnPoints: []
   gameMaster: {fileID: 0}
+  hexagonMenu: {fileID: 0}
+  hexagonMenuGameObject: {fileID: 0}
+  resourceCost: 0
   hexagon: {fileID: 2654444374251995247}
   selectedSpawnPoint: {fileID: 0}
   objectInSpace: 0

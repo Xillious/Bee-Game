@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4865841995607015108}
   - component: {fileID: 8273732206961535436}
-  - component: {fileID: 6654809651172935378}
   - component: {fileID: 6978608532989620468}
+  - component: {fileID: 6654809651172935378}
   - component: {fileID: 3078816067214524999}
   m_Layer: 0
   m_Name: SpwnPoint
@@ -87,6 +87,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6978608532989620468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245700482374614772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a8629c3fdc8b84d8389412200d7fc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisHexagon: {fileID: 0}
+  spawnPoints: []
+  gameMaster: {fileID: 0}
+  hexagonMenu: {fileID: 0}
+  resourceCost: 0
+  hexagon: {fileID: 2844978737829253638, guid: 7c4cf0c50c350214d994d1503b2a4226, type: 3}
+  selectedSpawnPoint: {fileID: 0}
+  objectInSpace: 0
 --- !u!60 &6654809651172935378
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -118,23 +138,6 @@ PolygonCollider2D:
       - {x: 0.25, y: -0.43359375}
       - {x: 0.5, y: 0}
       - {x: 0.25, y: 0.43359375}
---- !u!114 &6978608532989620468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245700482374614772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34a8629c3fdc8b84d8389412200d7fc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisHexagon: {fileID: 0}
-  spawnPoints: []
-  gameMaster: {fileID: 0}
-  hexagon: {fileID: 2844978737829253638, guid: 7c4cf0c50c350214d994d1503b2a4226, type: 3}
-  objectInSpace: 0
 --- !u!50 &3078816067214524999
 Rigidbody2D:
   serializedVersion: 4

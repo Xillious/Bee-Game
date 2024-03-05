@@ -50,6 +50,7 @@ public class SpawnPoint : HexagonSpawn
         //CreateHexagon(hexagon);
         hexagonSpawn.DisableSpawnPoints();
         gameMaster.OpenMenu(gameMaster.buildMenu);
+
     }
 
     private void Highlight()
@@ -75,6 +76,7 @@ public class SpawnPoint : HexagonSpawn
 
         //oeens the build menu
         gameMaster.OpenMenu(gameMaster.buildMenu);
+
 
         //Instantiate(newHexagon, this.transform.position, this.transform.rotation);
         hexagonSpawn.DisableSpawnPoints();

@@ -10,10 +10,16 @@ public class HexagonSpawn : MonoBehaviour
     public List<Transform> spawnPoints = new List<Transform>();
 
     public GameMaster gameMaster;
+    public RectTransform hexagonMenu;
+    public GameObject hexagonMenuGameObject;
+    public GameObject gameMasterGameObject;
+
+    public int resourceCost;
 
     private void Awake()
     {
         gameMaster = FindObjectOfType<GameMaster>();
+        gameMasterGameObject = GameObject.FindGameObjectWithTag("GameMaster");
     }
 
     void Start()
@@ -33,27 +39,37 @@ public class HexagonSpawn : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            //allows you to place new hexagons
-            Debug.Log("Building");
-            gameMaster.SwitchState(GameMaster.GameState.Building);
 
-        }
         if (gameMaster.currentState == GameMaster.GameState.Building)
         {
             EnableSpawnPoints();
         }
 
-        if (Input.GetKeyDown(KeyCode.V))
+        if (gameMaster.currentState != GameMaster.GameState.Building)
         {
-            gameMaster.SwitchState(GameMaster.GameState.NotBuilding);
             DisableSpawnPoints();
         }
 
 
+
     }
 
+    private void OnMouseDown()
+    {
+        gameMaster.OpenMenu(hexagonMenu);
+        Debug.Log("open menu");
+        //this.gameObject.SetActive(false);
+        //hexagonMenuGameObject.SetActive(true);
+    }
+
+    /*
+        private void OnMouseDown(GameObject hexagon)
+        {
+            //gameMaster.selectedHexagon = this.gameObject;
+            //gameMaster.OpenMenu(gameMaster.selectedHexagon);
+            //Debug.Log("open menu");
+        }
+    */
     private void EnableSpawnPoints()
     {
         //enables spawn points around the hexagon
@@ -70,7 +86,11 @@ public class HexagonSpawn : MonoBehaviour
         {
             spawnPoint.gameObject.SetActive(false);
         }
-        Debug.Log("disablaling spawn points");
+    }
+
+    public void HexagonToSpawn(GameObject hexagon)
+    {
+
     }
 
 
